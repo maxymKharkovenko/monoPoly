@@ -1,0 +1,9 @@
+.play-field {
+  margin: 0 20%;
+}
+
+@media screen and (max-width:1025px) {
+  .play-field {
+    margin: 0 0;
+  }
+}
