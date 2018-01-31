@@ -36,6 +36,7 @@ import {
 import {CdkTableModule} from '@angular/cdk/table';
 import { AppComponent } from './app.component';
 import { GlobalFieldComponent } from './globalField/global-field/global-field.component';
+import { CubeComponent } from './cube/cube/cube.component';
 
 @NgModule({
   exports: [
@@ -71,14 +72,15 @@ import { GlobalFieldComponent } from './globalField/global-field/global-field.co
     MatTabsModule,
     MatToolbarModule,
     MatTooltipModule,
-  ]
+  ],
 })
 export class DemoMaterialModule {}
 
 @NgModule({
   declarations: [
     AppComponent,
-    GlobalFieldComponent
+    GlobalFieldComponent,
+    CubeComponent
   ],
   imports: [
     BrowserModule,

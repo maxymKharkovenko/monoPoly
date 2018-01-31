@@ -4,6 +4,11 @@
     [colspan]="tile.cols"
     [rowspan]="tile.rows"
     [style.background]="tile.color">
-    {{tile.text}}
+      <span *ngIf="!tile.component">
+        <img src=" {{tile.src}}" alt="This is a cool picture"  width="40px"/>
+      </span>
+      <div *ngIf="tile.component">
+        <app-cube></app-cube>
+      </div>
   </mat-grid-tile>
 </mat-grid-list>

@@ -1,3 +1,22 @@
-<p>
-  cube works!
-</p>
+<div class="demo">
+  <div id='cube-first' class="{{numFirst}}">
+    <div class='face front'>1</div>
+    <div class='face left'>2</div>
+    <div class='face top'>3</div>
+    <div class='face bottom'>4</div>
+    <div class='face right'>5</div>
+    <div class='face back'>6</div>
+  </div>
+</div>
+
+<div class="demo">
+  <div id='cube-second' class="{{numSecond}}">
+    <div class='face front'>1</div>
+    <div class='face left'>2</div>
+    <div class='face top'>3</div>
+    <div class='face bottom'>4</div>
+    <div class='face right'>5</div>
+    <div class='face back'>6</div>
+  </div>
+</div>
+<button (click)="update()">Update</button>
