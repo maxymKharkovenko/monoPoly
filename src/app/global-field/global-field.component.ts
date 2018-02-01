@@ -73,7 +73,7 @@ export class GlobalFieldComponent implements OnInit {
   ngOnInit() {
 
   }
-  startPlay (id) {
+  startPlay (id: number) {
     console.log(this.tiles);
     let theThing = document.querySelector("#thing");
     let container = document.querySelector(".play-field");

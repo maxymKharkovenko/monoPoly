@@ -1,4 +1,4 @@
-import { Component, OnInit, Input } from '@angular/core';
+import { Component, OnInit, Output, EventEmitter } from '@angular/core';
 
 @Component({
   selector: 'app-cube',
@@ -7,7 +7,7 @@ import { Component, OnInit, Input } from '@angular/core';
 
 })
 export class CubeComponent implements OnInit {
-  @Input('on-start') onStart: any;
+  @Output() start = new EventEmitter<number>();
   numFirst = '';
   numSecond = '';
 
@@ -15,15 +15,15 @@ export class CubeComponent implements OnInit {
 
   ngOnInit() {
   }
-  start () {
-    this.onStart();
+  onStart () {
+    this.start.emit(0);
   }
   update () {
     this.numFirst = 'face' + (Math.floor(Math.random() * 6) + 1);
     this.numSecond = 'face' + (Math.floor(Math.random() * 6) + 1);
 
     let sum = (this.numFirst + this.numSecond) -1;
-    this.onStart(sum);
+    this.start.emit(sum);
   }
 
 }

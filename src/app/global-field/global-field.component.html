@@ -9,7 +9,7 @@
         <img *ngIf="tile.src" src=" {{tile.src}}" alt="This is a cool picture"  width="50px"/>
       </span>
     <div *ngIf="tile.component">
-      <app-cube (on-start)="startPlay()"></app-cube>
+      <app-cube (start)="startPlay()"></app-cube>
     </div>
   </mat-grid-tile>
 </mat-grid-list>
