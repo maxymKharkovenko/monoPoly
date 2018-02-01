@@ -35,8 +35,8 @@ import {
 } from '@angular/material';
 import {CdkTableModule} from '@angular/cdk/table';
 import { AppComponent } from './app.component';
-import { GlobalFieldComponent } from './globalField/global-field/global-field.component';
-import { CubeComponent } from './cube/cube/cube.component';
+import { GlobalFieldComponent } from './global-field/global-field.component';
+import { CubeComponent } from './cube/cube.component';
 
 @NgModule({
   exports: [

@@ -1,4 +1,5 @@
 <mat-grid-list cols="13" rowHeight="70px" class="play-field">
+  <div id="thing"></div>
   <mat-grid-tile
     *ngFor="let tile of tiles"
     [colspan]="tile.cols"
@@ -7,8 +8,8 @@
       <span *ngIf="!tile.component">
         <img *ngIf="tile.src" src=" {{tile.src}}" alt="This is a cool picture"  width="50px"/>
       </span>
-      <div *ngIf="tile.component">
-        <app-cube></app-cube>
-      </div>
+    <div *ngIf="tile.component">
+      <app-cube (on-start)="startPlay()"></app-cube>
+    </div>
   </mat-grid-tile>
 </mat-grid-list>

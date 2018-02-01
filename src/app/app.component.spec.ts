@@ -1,6 +1,6 @@
 import { TestBed, async } from '@angular/core/testing';
 import { AppComponent } from './app.component';
-import { GlobalFieldComponent } from './globalField/global-field';
+import { GlobalFieldComponent } from './global-field/global-field';
 describe('AppComponent', () => {
   /*beforeEach(async(() => {
     TestBed.configureTestingModule({
