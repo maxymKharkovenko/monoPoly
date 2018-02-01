@@ -1,11 +1,11 @@
-<mat-grid-list cols="14" rowHeight="50px" class="play-field">
+<mat-grid-list cols="13" rowHeight="70px" class="play-field">
   <mat-grid-tile
     *ngFor="let tile of tiles"
     [colspan]="tile.cols"
     [rowspan]="tile.rows"
     [style.background]="tile.color">
       <span *ngIf="!tile.component">
-        <img src=" {{tile.src}}" alt="This is a cool picture"  width="40px"/>
+        <img *ngIf="tile.src" src=" {{tile.src}}" alt="This is a cool picture"  width="50px"/>
       </span>
       <div *ngIf="tile.component">
         <app-cube></app-cube>
