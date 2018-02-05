@@ -19,10 +19,12 @@ export class CubeComponent implements OnInit {
     this.start.emit(0);
   }
   update () {
-    this.numFirst = 'face' + (Math.floor(Math.random() * 6) + 1);
-    this.numSecond = 'face' + (Math.floor(Math.random() * 6) + 1);
+    const f = (Math.floor(Math.random() * 6) + 1);
+    const s = (Math.floor(Math.random() * 6) + 1);
+    this.numFirst = 'face' + f;
+    this.numSecond = 'face' + s;
 
-    let sum = (this.numFirst + this.numSecond) -1;
+    const sum = (f + s) - 1;
     this.start.emit(sum);
   }
 
